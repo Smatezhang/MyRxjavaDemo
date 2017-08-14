@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhang.rxjava.myrxjavademo.MainActivity">
+
+    <com.zhang.rxjava.myrxjavademo.widget.MultiSwipeRefreshLayout
+
+        android:id="@+id/msrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dp3"
+            android:paddingRight="@dimen/dp3"
+            />
+    </com.zhang.rxjava.myrxjavademo.widget.MultiSwipeRefreshLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fa_btn"
+        android:layout_gravity="right|bottom"
+        android:clickable="true"
+        android:elevation="4dp"
+        app:elevation="4dp"
+        app:layout_anchor="@id/msrl"
+        app:borderWidth="0dp"
+        app:layout_anchorGravity="right|bottom"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:src="@mipmap/ic_github"
+        />
+
+
+</android.support.design.widget.CoordinatorLayout>
